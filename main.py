@@ -12,11 +12,11 @@ ed_doctor = simpy.Resource(env, capacity=1)
 acu_doctor = simpy.Resource(env, capacity=1)
 
 # Set up parameter values
-ed_inter = 8
+ed_inter = 5
 mean_register = 2
 mean_triage = 5
-mean_ed_assess = 30
-mean_acu_assess = 60
+mean_ed_assess = 20
+mean_acu_assess = 10
 
 # Number of patients to simulate
 num_patients = 20
