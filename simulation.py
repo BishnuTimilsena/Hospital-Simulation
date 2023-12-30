@@ -1,7 +1,7 @@
 import simpy
-import random 
+import random
 
-# This function generates patients
+# This function generates patient
 def patient_generator(env, num_patients, mean_register, mean_triage, mean_ed_assess, mean_acu_assess, receptionist, nurse, ed_doctor, acu_doctor, ed_inter):
     p_id = 0  
     while p_id < num_patients:  
@@ -67,4 +67,4 @@ def activity_generator(env, mean_register, mean_triage, mean_ed_assess, mean_acu
 # This function runs the simulation
 def run_simulation(env, num_patients, mean_register, mean_triage, mean_ed_assess, mean_acu_assess, receptionist, nurse, ed_doctor, acu_doctor, ed_inter):
     env.process(patient_generator(env, num_patients, mean_register, mean_triage, mean_ed_assess, mean_acu_assess, receptionist, nurse, ed_doctor, acu_doctor, ed_inter))  # Start the patient generator
-    env.run(until=480)  # Run the simulation until the specified time
+    env.run(until=450)  # Run the simulation until the specified time
